@@ -23,7 +23,7 @@ You can install directly from GitHub using `pip`:
 pip install git+https://github.com/markcus97/condcopula.git
 ```
 
-This will automatically install dependencies including pyvinecopulib and cmdstanpy.
+This will automatically install dependencies including [`pyvinecopulib`](https://github.com/vinecopulib/pyvinecopulib) and [`cmdstanpy`](https://github.com/stan-dev/cmdstanpy).
 If you have never used CmdStan before, the first run may take a few minutes to compile the STAN models.
 
 ---
