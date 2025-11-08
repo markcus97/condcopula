@@ -157,7 +157,7 @@ Hanebeck, A., Şahin, Ö., Havlíčková, P. et al. Sampling from Conditional Di
 
 The wrapper itself is a translation into Python of the wrapper the authors provided in the R programming language. The original code is available at: [https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/](https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/).
 
-All credit for the MCMC sampling methodolog,y implementation, and the original R wrapper goes to the paper's authors.
+All credit for the MCMC sampling methodology, implementation, and the original R wrapper goes to the paper's authors.
 
 ## License
 
