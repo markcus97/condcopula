@@ -577,13 +577,13 @@ def vinecop_conditional_sample(
             seed = 12345
         )
     >>> print(sample)
-    [[0.31933428 0.24004681]
-    [0.4696318  0.3716008 ]
-    [0.18236888 0.38030853]
+    [[0.3514476  0.36845809]
+    [0.2122368  0.36747993]
+    [0.96914275 0.47400057]
     ...
-    [0.34555428 0.38613813]
-    [0.51055103 0.34963525]
-    [0.24754671 0.47006729]]
+    [0.32418243 0.28573965]
+    [0.2134473  0.35859307]
+    [0.41961971 0.1817589 ]]
     
     """
     # Validate inputs
@@ -615,8 +615,8 @@ def vinecop_conditional_sample(
 
     # Clip conditional values for numerical stability
     eps = 1e-12
-    conditional_values = [float(x) for x in conditional_values if x]
-    conditional_values = [min(max(x,eps),1 - eps) for x in conditional_values if x]
+    conditional_values = [float(x) if x else False for x in conditional_values]
+    conditional_values = [min(max(x,eps),1 - eps) if x else False for x in conditional_values]
 
     # Load Stan
     if num_conditioned_vars == 1:

@@ -1,12 +1,15 @@
-# condcopula
+# Conditional sampling from an arbitrary copula in Python
 
-**Conditional sampling from an arbitrary copula in Python.**
+`condcopula` provides a simple interface to conditionally sample a bivariate or a vine copula, with arbitrary conditioning sets.
 
-`condcopula` provides a simple interface to conditionally sample a bivariate or a vine copula, with arbitrary conditioning sets. Copulas should be defined using  the [`pyvinecopulib`](https://github.com/vinecopulib/pyvinecopulib) library.
+Copulas are defined using  the [`pyvinecopulib`](https://github.com/vinecopulib/pyvinecopulib) library.
 
-Sampling of a bivariate copula is implemented using the inverse Rosenblatt transform. Vine copula sampling is done using a Markov chain Monte Carlo approach as described and implemented [here](https://doi.org/10.1007/s11222-025-10652-4).
+* **Bivariate copulas** are sampled using the inverse Rosenblatt transform.
+* **Vine copulas** are sampled using a Markov chain Monte Carlo approach following [Hanebeck et al. (2025)](https://doi.org/10.1007/s11222-025-10652-4).
 
-Only continuous variables are supported.
+
+
+⚠️ Only continuous variables are supported.
 
 
 
@@ -17,8 +20,11 @@ Only continuous variables are supported.
 You can install directly from GitHub using `pip`:
 
 ```bash
-pip install git+https://github.com/<your-username>/condcopula.git
+pip install git+https://github.com/markcus97/condcopula.git
 ```
+
+This will automatically install dependencies including pyvinecopulib and cmdstanpy.
+If you have never used CmdStan before, the first run may take a few minutes to compile the STAN models.
 
 ---
 
@@ -132,23 +138,28 @@ sample = vinecop_conditional_sample(
             seed = 12345
         )
 print(sample)
-[[0.31933428 0.24004681]
-[0.4696318  0.3716008 ]
-[0.18236888 0.38030853]
-...
-[0.34555428 0.38613813]
-[0.51055103 0.34963525]
-[0.24754671 0.47006729]]
+[[0.3514476  0.36845809]
+ [0.2122368  0.36747993]
+ [0.96914275 0.47400057]
+ ...
+ [0.32418243 0.28573965]
+ [0.2134473  0.35859307]
+ [0.41961971 0.1817589 ]]
 
 ```
 
 
 ## Attribution
 
-Implementation of conditional vine sampling is a wrapper around the STAN code accompanying:
+Implementation of conditional vine sampling is a wrapper around the [STAN code](https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/) accompanying:
 
 Hanebeck, A., Şahin, Ö., Havlíčková, P. et al. Sampling from Conditional Distributions of Simplified Vines. Stat Comput 35, 128 (2025). [https://doi.org/10.1007/s11222-025-10652-4](https://doi.org/10.1007/s11222-025-10652-4)
 
-The wrapper itself is a translation into Python of the wrapper the authors [released](https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/) in the R programming language.
+The wrapper itself is a translation into Python of the wrapper the authors provided in the R programming language. The original code is available at: [https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/](https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/).
 
+All credit for the MCMC sampling methodolog,y implementation, and the original R wrapper goes to the paper's authors.
+
+## License
+
+MIT License — see the [LICENSE](LICENSE) file for details.
 
