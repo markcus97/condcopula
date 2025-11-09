@@ -123,7 +123,7 @@ vinecop = pv.Vinecop.from_structure(
         )
 
 # Specify values for conditional variables
-# We will condition on variables 1, 3, and 5, taking on values
+# We will condition on variables 1, 3, and 5 taking on values
 # 0.20, 0.45, 0.78
 values_for_conditional = {
             1: 0.20,
