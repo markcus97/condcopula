@@ -18,6 +18,10 @@ dependencies = [
 [tool.poetry]
 packages = [{include = "condcopula", from = "src"}]
 
+include = [
+    "src/condcopula/stan/STAN.stan",
+    "src/condcopula/stan/STAN2.stan",
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
