@@ -1,4 +1,4 @@
-# Conditional sampling from an arbitrary copula in Python
+# Conditional sampling from a copula in Python
 
 `condcopula` provides a simple interface to conditionally sample a bivariate or a vine copula, with arbitrary conditioning sets.
 
