@@ -19,9 +19,9 @@ from cmdstanpy import CmdStanModel, install_cmdstan
 cmdstanpy.disable_logging()
 
 this_dir = Path(__file__).resolve().parent
-stan1_file = this_dir / "../../assets/STAN.stan"
+stan1_file = this_dir / "STAN.stan"
 stan1_file = stan1_file.resolve()
-stan2_file = this_dir / "../../assets/STAN2.stan"
+stan2_file = this_dir / "STAN2.stan"
 stan2_file = stan2_file.resolve()
 try:
     stan1_model = CmdStanModel(stan_file=stan1_file)
