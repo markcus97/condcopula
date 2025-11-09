@@ -150,6 +150,10 @@ print(sample)
 
 You may also use the function `copula_conditional_sample` which has the same syntax as `vinecop_conditional_sample` but accepts a bivariate or a vine copula.
 
+## Known issues
+
+* There seems to be some inconsistency in vine copula sampling results despite setting the seed.
+
 ## Attribution
 
 Implementation of conditional vine sampling is a wrapper around the [STAN code](https://github.com/ArianeHanebeck/Sampling_Conditional_Vines/) accompanying:
