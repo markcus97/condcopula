@@ -148,6 +148,7 @@ print(sample)
 
 ```
 
+You may also use the function `copula_conditional_sample` which has the same syntax as `vinecop_conditional_sample` but accepts a bivariate or a vine copula.
 
 ## Attribution
 
